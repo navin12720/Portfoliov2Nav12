@@ -1,0 +1,165 @@
+.contain {
+  position: absolute;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+.scrolling-container {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  overflow: hidden;
+  margin-left: 80px;
+  -webkit-mask: linear-gradient(transparent, white);
+  position: relative;
+}
+
+.scrolling-content {
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+img {
+  display: flex;
+  height: auto;
+  width: 800px;
+  margin-top: -43px;
+}
+.side {
+  margin-top: 90px;
+}
+
+.container {
+  display: flex;
+}
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children vertically */
+  gap: 5rem;
+  height: 80vh;
+  z-index: -1;
+}
+a {
+  text-decoration: none;
+  font-size: 40px;
+  margin: 10px;
+  margin-top: 30px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  /* margin-left: 151px; */
+  margin: 0 auto;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+button::after,
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #000000;
+  border-radius: 20px;
+  opacity: 0.7;
+  height: 20px;
+  width: 95px;
+  padding: 10px;
+}
+button:before {
+  animation: notification 2s ease-in-out infinite;
+}
+button:after {
+  animation: notification 2s 1s ease-in-out infinite;
+}
+@keyframes notification {
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.button {
+  margin-top: 60px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+h1,
+h2 {
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+}
+.button h1,
+.button h2 {
+  text-align: center;
+}
+
+.button .icon {
+  text-align: center;
+}
+.typewriter {
+  margin: 30px;
+  font-size: 30px;
+  margin-top: 30px;
+  height: 200px;
+  width: 400px;
+}
+@media (max-width: 768px) {
+  .scrolling-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .heading {
+    text-align: center;
+  }
+
+  img {
+    width: 450px;
+    height: 490px;
+    margin-top: -10px;
+  }
+  .typewriter {
+    margin-bottom: 20px;
+    height: 260px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #profile {
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .button {
+    text-align: center;
+    margin-top: 30px;
+  }
+}

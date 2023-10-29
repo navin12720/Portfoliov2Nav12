@@ -1,0 +1,14 @@
+.count-text1 {
+  margin-top: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: monospace;
+}
+.body {
+  margin: 30px;
+}

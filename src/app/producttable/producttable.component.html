@@ -1,0 +1,16 @@
+<table border="1">
+    <tr>
+        <th>ProductName</th>
+        <th>Detail</th>
+        <th>Address</th>
+    </tr>
+    <tr *ngFor="let x of filteredItems;let index=index">
+        <td>{{ x.name }}</td>
+        <td>{{ x.detail }}</td>
+        <td>{{ x.address }} <button (click)="delete(index)">Delete</button></td>
+
+    </tr>
+</table>
+<p class="count-text">count of presentdata:<span
+        style="background-color: white;color: black;padding: 5px;border-radius: 5px;">{{filteredItems.length}}
+    </span></p>

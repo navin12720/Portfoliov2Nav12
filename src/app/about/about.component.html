@@ -1,0 +1,90 @@
+<section>
+    <div class="contain">
+        <div class="mypic">
+            <img src="/assets/navin.jpg" alt="">
+        </div>
+        <div class="mydetail">
+            <h1>Navin S</h1>
+            <h2>I'm a Frontend Developer</h2>
+            <p>Ambitious for a career that places me in a challenging position within a fast-paced and learning
+                environment
+                for developing my technical and inter-personal skills.</p>
+            <button (click)="downlo()">Download My CV</button>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="contain1">
+        <div class="img">
+            <img src="/assets/valliammai.png" alt="">
+        </div>
+        <div class="about">
+            <h2 style="color: red;">SRM Valliammai Engineering College</h2>
+            <p>During my college journey as a B.E.Computer Science, I embraced growth through academics,
+                extracurriculars,
+                internships, and community involvement. I'm ready to apply my diverse skills and knowledge to the
+                professional
+                world, emphasizing perseverance, adaptability, and impact. This portfolio showcases my dedication and
+                achievements.</p>
+            <p style="background-color: black;color: white;font-size: 15px;
+              width: 100px;
+              margin: 0 auto; padding: 5px;border-radius: 10px;">CGPA:<b>8.28</b></p>
+        </div>
+    </div>
+    <h2 style="margin-top: 20px;">Certificates</h2>
+    <div class="cert">
+        <div class="pic1">
+            <img src="/assets/cert.jpeg" alt="">
+            <p style="text-align: center;">6-week online training on Core Java.
+                The training consisted of Getting Started with Java, Leveraging Basic Concepts, Object Oriented
+                Programming,
+                and Java App Development modules.</p>
+        </div>
+        <div class="pic2">
+            <img src="/assets/cert1.jpeg" alt="">
+            <p style="text-align: center;">Successfully completed the course an Interactive JavaScript course</p>
+        </div>
+    </div>
+
+</section>
+<section class="section">
+    <div class="contact">
+        <form (ngSubmit)="submitForm()" class="form">
+            <h3 style="color: rgb(0, 0, 0);">Contact Me</h3>
+            <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control" [(ngModel)]="contactForm.name" required>
+                <label for="name" class="form-label">Name:</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="email" name="email" class="form-control" [(ngModel)]="contactForm.email"
+                    required>
+                <label for="email" class="form-label">Email:</label>
+            </div>
+            <div class="form-group">
+                <input id="message" type="text" name="message" class="form-control" [(ngModel)]="contactForm.message"
+                    required>
+                <label for="message" class="form-label">Message:</label>
+            </div>
+
+            <div class="form-group">
+                <button [disabled]="!isFormValid()">Submit</button>
+            </div>
+            <div class="he">
+                <h4 style="text-align: center;color: rgb(0, 0, 0);">Follow Me On</h4>
+                <div class="icon">
+                    <a href="https://www.linkedin.com/in/n-a-v-i-n-s-8b7069230/" class="fa-brands fa-linkedin-in"
+                        style="color: #000000;"></a>
+                    <a href="https://github.com/settings/profile" class="fa-brands fa-github"
+                        style="color: #000000;"></a>
+                    <a href="mailto:navin1272000@gmail.com" class="fa-solid fa-at" style="color: #000000;"></a>
+                </div>
+            </div>
+
+
+            <div *ngIf="submissionStatus" class="submission-status">
+                <p style="color: rgb(0, 0, 0); margin-top: 5px;">{{ submissionStatus }}</p>
+            </div>
+        </form>
+    </div>
+
+</section>

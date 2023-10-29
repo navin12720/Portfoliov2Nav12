@@ -1,0 +1,9 @@
+<h2 style="text-align: center;font-family: monospace;font-weight: bold;margin-top: 60px;">Product Search</h2>
+<div class="body">
+    <app-productdetail (arraydata)="getarray($event)"></app-productdetail>
+    <app-producttextbox (count)="getcount($event)" (search)="filter($event)"></app-producttextbox>
+    <app-producttable [data]="count" [searchdata]="searchdata"></app-producttable>
+    <p class="count-text1">Total Count:<span
+            style="background-color: white;color: black;padding: 5px;border-radius: 5px;">{{ count.length
+            }}</span></p>
+</div>

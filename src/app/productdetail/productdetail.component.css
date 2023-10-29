@@ -1,0 +1,56 @@
+/* Style for the form container */
+form {
+  width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+  background-color: #f7f7f7;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Style for form input fields */
+input[type="text"] {
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Style for submit button */
+button[type="submit"] {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  font-family: monospace;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #161717;
+}
+@media (max-width: 600px) {
+  form {
+    width: 90%; /* Adjust the form width for smaller screens */
+    padding: 15px;
+
+    /* Adjust padding for smaller screens */
+  }
+
+  input[type="text"] {
+    width: 90%; /* Adjust input field width for full width on smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  button[type="submit"] {
+    width: 100%; /* Make the submit button full width on smaller screens */
+    margin-top: 10px; /* Adjust margin for smaller screens */
+  }
+}

@@ -1,0 +1,24 @@
+/* Style for the input container */
+.input-container {
+  margin: 20px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+/* Style for the input field */
+.input-field {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+@media (max-width: 600px) {
+  .input-container {
+    margin: 10px; /* Adjust margin for smaller screens */
+  }
+
+  .input-field {
+    width: 80%; /* Adjust width for full width on smaller screens */
+  }
+}

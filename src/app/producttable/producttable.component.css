@@ -1,0 +1,78 @@
+/* Style for the table */
+table {
+  /* border-collapse: collapse; */
+  width: 80%;
+  background-color: grey;
+  /* border: 1px solid #ddd; */
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+/* Style for table header cells */
+th {
+  background-color: #000000;
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 15px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Style for table data cells */
+td {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: monospace;
+}
+button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: gray;
+  margin-left: 5px;
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style for the "count of presentdata" line */
+.count-text {
+  margin-top: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: monospace;
+}
+@media (max-width: 500px) {
+  table {
+    width: 100%;
+    align-items: center;
+    border-radius: 15px; /* Adjust the table width for smaller screens */
+  }
+
+  th,
+  td {
+    padding: 6px; /* Decrease padding for smaller cells */
+  }
+
+  .count-text {
+    padding: 8px; /* Adjust padding for smaller text box */
+  }
+}

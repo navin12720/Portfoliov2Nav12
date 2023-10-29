@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="send()">
+    Productname:<input type="text" [(ngModel)]="proname" formControlName="proname" /> <br />
+    Detail: <input type="text" [(ngModel)]="detail" formControlName="address" />
+    <br />
+    Address:<input type="text" [(ngModel)]="address" formControlName="address" /><br />
+
+    <button type="submit">Submit</button>
+</form>

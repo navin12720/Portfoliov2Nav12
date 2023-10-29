@@ -1,0 +1,60 @@
+<section>
+    <div class="otp">
+        <div class="contain">
+            <h3 style="text-align: center;font-weight: bold;">OTP Generator and Verifier</h3>
+            <div>
+                <button (click)="generateOTP()">Send OTP</button>
+            </div>
+            <h3
+                style="background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, red, purple) border-box;border: 4px solid transparent ;border-radius: 50em;width: 170px">
+                Received OTP:{{predefinedOTP}}</h3>
+            <div class="container">
+                <div>
+                    <input type="tel" #otpInput1 [(ngModel)]="text1" (keyup)="onKeyUp($event, '',otpInput1, otpInput2)"
+                        maxlength="1" />
+                    <input type="tel" #otpInput2 [(ngModel)]="text2"
+                        (keyup)="onKeyUp($event, otpInput1,otpInput2, otpInput3)" maxlength="1" />
+                    <input type="tel" #otpInput3 [(ngModel)]="text3"
+                        (keyup)="onKeyUp($event,otpInput2, otpInput3, otpInput4)" maxlength="1" />
+                    <input type="tel" #otpInput4 [(ngModel)]="text4" (keyup)="onKeyUp($event,otpInput3, otpInput4, '')"
+                        maxlength="1" />
+                </div>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;margin-top: 10px;">
+                <button [disabled]="!isOTPComplete" (click)="verifyOTP()">Verify OTP</button>
+                <div class="msg">
+                    <h3>{{msg}}</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contain1">
+        <h3 style="text-align: center;">To-Do List</h3>
+        <input type="text" [(ngModel)]="newTask" #newTaskInput="ngModel" placeholder="Add a new task"
+            (keyup.enter)="addTask()">
+        <button (click)="addTask()">Add</button><br>
+        <div class="checkbox correct">
+            <label style="font-family: monospace;font-weight: bold;" for="check">Show completed tasks:</label>
+            <input type="checkbox" [(ngModel)]="showCompleted" id="check"><br>
+        </div>
+        <table border="1">
+            <tr>
+                <th>completed Task</th>
+                <th>ToEdit</th>
+                <th>ToRemove</th>
+            </tr>
+            <tr *ngFor="let task of filteredTasks(); let i = index">
+                <td><input type="checkbox" [(ngModel)]="task.completed"> {{
+                    task.title }}</td>
+                <td><input [(ngModel)]="task.title" (blur)="updatetitle(task,task.title)"
+                        style="border-radius: 6px;outline: none; height: 20px;font-family: monospace;font-weight: bold;padding: 0 6px;" />
+                </td>
+                <td><button (click)="deleteTask(i)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+
+</section>

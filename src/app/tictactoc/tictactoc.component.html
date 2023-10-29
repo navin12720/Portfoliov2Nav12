@@ -1,0 +1,17 @@
+<section>
+    <div class="h1">
+        <h2 style="text-align: center;font-family: monospace;font-weight: bold;">TicTacToe</h2>
+
+        <div class="tic-tac-toe">
+
+            <div class="cell" *ngFor="let cell of cells; let i = index" (click)="cellClick(i)">
+                {{ cell }}
+            </div>
+            <div id="statustext" [style.color]="roundWon ? 'green' : (!cells.includes('') ? 'orange' : 'initial')">{{
+                statustext
+                }}</div>
+            <br>
+            <button id="reset" (click)="restart()">Restart</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,198 @@
+section {
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  border: 2px solid black;
+}
+.checkbox input[type="checkbox"]:checked::before {
+  content: "";
+  font-weight: 700;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.correct input[type="checkbox"]:checked::before {
+  content: "\2713";
+  color: white;
+  background: black;
+}
+.contain,
+.contain1 {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px;
+  width: 340px;
+  height: 300px;
+}
+.contain1 {
+  overflow: scroll;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+}
+
+button {
+  padding: 8px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  font-family: monospace;
+  font-weight: bold;
+  font-size: large;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  margin: 10px 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: larger;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  padding: 5px;
+  margin: 15px;
+  text-align: center;
+  font-family: monospace;
+}
+
+/* Style the OTP input fields */
+.container input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+/* Style the message */
+.container .msg {
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: monospace;
+}
+
+table {
+  /* border-collapse: collapse; */
+  width: 80%;
+  background-color: grey;
+  /* border: 1px solid #ddd; */
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+/* Style for table header cells */
+th {
+  background-color: #000000;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 10px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Style for table data cells */
+td {
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: monospace;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* For screens with a maximum width of 600px */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  table {
+    width: 100%;
+    align-items: center;
+    border-radius: 15px; /* Adjust the table width for smaller screens */
+  }
+
+  th,
+  td {
+    padding: 6px; /* Decrease padding for smaller cells */
+  }
+
+  input[type="text"] {
+    width: 95%; /* Adjust as needed */
+    margin-right: 0;
+  }
+
+  button {
+    padding: 6px 10px; /* Adjust as needed */
+    margin: 3px;
+  }
+}
