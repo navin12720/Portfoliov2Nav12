@@ -1,16 +1,21 @@
-<table border="1">
-    <tr>
-        <th>ProductName</th>
-        <th>Detail</th>
-        <th>Address</th>
-    </tr>
-    <tr *ngFor="let x of filteredItems;let index=index">
-        <td>{{ x.name }}</td>
-        <td>{{ x.detail }}</td>
-        <td>{{ x.address }} <button (click)="delete(index)">Delete</button></td>
+<div *ngIf="filteredItems.length>0 ;else nodata">
+    <table border="1">
+        <tr>
+            <th>ProductName</th>
+            <th>Detail</th>
+            <th>Address</th>
+        </tr>
+        <tr *ngFor="let x of filteredItems;let index=index">
+            <td>{{ x.name }}</td>
+            <td>{{ x.detail }}</td>
+            <td>{{ x.address }} <button (click)="delete(index)">Delete</button></td>
 
-    </tr>
-</table>
-<p class="count-text">count of presentdata:<span
-        style="background-color: white;color: black;padding: 5px;border-radius: 5px;">{{filteredItems.length}}
-    </span></p>
+        </tr>
+    </table>
+    <p class="count-text">count of presentdata:<span
+            style="background-color: white;color: black;padding: 5px;border-radius: 5px;">{{filteredItems.length}}
+        </span></p>
+</div>
+<ng-template #nodata>
+    <h3 style="text-align: center;font-family: monospace;"> No data to fetch...</h3>
+</ng-template>
